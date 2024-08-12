@@ -1,0 +1,11 @@
+Send Request
+GET http://localhost:3000/posts
+
+###
+
+Send Request
+POST http://localhost:3000/login
+Content-Type:application/json
+{
+    "username":"Sravan"
+}
