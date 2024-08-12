@@ -7,21 +7,6 @@ const jwt = require("jsonwebtoken");
 // Middleware to parse JSON request bodies
 app.use(express.json());
 
-const posts = [
-  {
-    username: "Sravan",
-    title: "Post 1",
-  },
-  {
-    username: "Madhu",
-    title: "Post 2",
-  },
-];
-
-app.get("/posts", authenticateToken, (req, res) => {
-  res.json(posts.filter((post) => post.username === req.user.name));
-});
-
 app.post("/login", (req, res) => {
   const username = req.body.username;
   const user = { name: username };
