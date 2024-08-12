@@ -1,11 +1,12 @@
-Send Request
+
 GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiU3JhdmFuIiwiaWF0IjoxNzIzNDgyNzE2fQ.aKLtuXAQsvI03PIPYl79wZPQ9O9ylWryKM5doNK67xA
 
 ###
 
-Send Request
 POST http://localhost:3000/login
-Content-Type:application/json
+Content-Type: application/json
+
 {
-    "username":"Sravan"
+    "username": "Sravan"
 }
