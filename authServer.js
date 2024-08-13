@@ -34,6 +34,10 @@ function generateAccessToken(user) {
   return jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "150s" });
 }
 
+app.delete("/logout", (req, res) => {
+  refreshTokens = refreshTokens.filter((token) => token !== req.body.token);
+  res.sendStatus(204);
+});
 app.listen(4000, () => {
   console.log("Server running on port 4000");
 });
